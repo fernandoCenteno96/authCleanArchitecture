@@ -12,6 +12,7 @@ export class LoginUserUsecase implements UseCase<UserModel,UserModel> {
     constructor(private userRepository:UserRepository) {}
 
     execute(params:UserModel):Observable<UserModel>{
+        
         return this.userRepository.loginUser(params);
     }
 }

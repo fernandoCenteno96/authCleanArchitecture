@@ -1,39 +1,46 @@
-<form class="form-singnup">
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputAddress">name </label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="">
-    </div>
-    
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">phone</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <div  class="form-singnup">
+            <div class="form-group" >
+                  <div class="form-row">
+                  <div class=" col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" formControlName="email" class="form-control" id="email">
+                  </div>
+                  <div class="col-md-6">
+                        <label for="Password">Password</label>
+                        <input type="password" formControlName="password" class="form-control" id="password">
+                  </div>
+                  </div>
+          
+                    <label for="name">name </label>
+                    <input type="text" formControlName="name" class="form-control" id="name" placeholder="name">
+
+                  <div class="form-row">
+                        <div class="col-md-6">
+                              <label for="phone">phone</label>
+                              <input type="text" class="form-control" id="phone" formControlName="phone" >
+                        </div> 
+                  </div>
+
+                   <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check" formControlName="accepTerms">
+                        <label class="form-check-label" for="check">
+                        I agree to the termis of service and privacy policy
+                        </label>
+                  </div>
+
+                <button type="submit" class="btn btn-primary">Created Accounts</button>
       
-    </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          I agree to the termis of service and privacy policy
-        </label>
+                  <div class="row mt-5">
+            
+                  <p>Already have an account?</p> <a routerLink="/signin">Sign in</a>
+                  </div>
+          </div>
+     
       </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Created Accounts</button>
+</form>
+    
 
-
-    <div class="row mt-5">
-
-        <p>Already have an account?<a routerLink="/signin">Sign in</a></p>
-    </div>
-  </form>
+  
+    

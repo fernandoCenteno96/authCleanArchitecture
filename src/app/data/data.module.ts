@@ -6,6 +6,7 @@ import { dataBaseModule } from './repository/dataBase/dataBase.module';
 
 //mockModule
 import { MockModule } from './repository/mock/mock.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MockModule } from './repository/mock/mock.module';
     declarations:[],
     imports:[
         dataBaseModule,
-        MockModule
+        MockModule,
+        
     ],
     providers:[],
     exports:[]

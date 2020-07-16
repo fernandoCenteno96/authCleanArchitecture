@@ -5,6 +5,6 @@ import { NgModule } from '@angular/core';
     declarations:[],
     imports:[],
     providers:[],
-    exports[]
+    exports:[]
 })
 export class dataBaseModule{}

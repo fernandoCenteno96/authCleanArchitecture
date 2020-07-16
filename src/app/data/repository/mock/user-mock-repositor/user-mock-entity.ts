@@ -1,7 +1,7 @@
 export interface UserMockEntity{
         id:string;
+        name?:string;
         email:string;
         password?:string;
-        name?:string;
         phone?:string;
 }
