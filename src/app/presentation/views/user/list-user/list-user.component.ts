@@ -9,16 +9,16 @@ import { Observable } from 'rxjs';
   styleUrls: ['./list-user.component.css']
 })
 export class ListUserComponent implements OnInit {
-   user:UserModel;
-  constructor(private getUser:GetUserUsecase) { 
+  user:UserModel;
+  constructor(private getuser:GetUserUsecase) { 
    
   }
 
   ngOnInit(): void {
-    this.getUserAll();
+    this.getUser();
   }
-  getUserAll():void{
-    this.getUser.execute().subscribe(data=>{
+  getUser():void{
+    this.getuser.execute().subscribe(data=>{
       this.user=data;
       console.log(this.user);
     });

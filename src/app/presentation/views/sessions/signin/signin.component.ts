@@ -25,7 +25,7 @@ loginForm=this.fb.group({
       const user:UserModel=this.loginForm.value;
       this.login.execute(user).subscribe((value)=>{
         if(value){
-          console.log(value);
+          
         }
       });
   }
